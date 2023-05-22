@@ -7,7 +7,8 @@ jobs:
       # checkout – клонирует репозиторий
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-      - run: npm install
+          with:
+            node-version: 18
       - run: make setup
       - run: make start
       - run: make test
